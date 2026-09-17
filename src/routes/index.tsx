@@ -336,11 +336,11 @@ export function Index() {
                 to="/programs"
                 className="course-card group flex w-[min(78vw,18rem)] shrink-0 snap-start flex-col overflow-hidden rounded-[1.25rem] bg-courses-card shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl sm:w-[18.5rem]"
               >
-                <div className="aspect-square w-full bg-about-canvas">
+                <div className="aspect-[4/3] w-full overflow-hidden bg-about-canvas">
                   <img
                     src={course.image}
                     alt={course.alt}
-                    className="size-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                    className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     width={1200}
                     height={1200}
                     sizes="(min-width: 640px) 296px, 78vw"
