@@ -193,7 +193,7 @@ export function Index() {
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           poster={heroPosterImg}
         >
           <source src={heroWebm} type="video/webm" />
