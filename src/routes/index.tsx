@@ -185,10 +185,10 @@ export function Index() {
     <main className="bg-about-canvas">
       <section
         aria-label="North East Yoga and Meditation Centre"
-        className="relative aspect-[9/16] max-h-[100svh] w-full overflow-hidden bg-hero-sky sm:aspect-[16/9]"
+        className="relative aspect-[9/16] max-h-[100svh] w-full overflow-hidden bg-about-canvas sm:aspect-[16/9]"
       >
         <video
-          className="absolute inset-0 h-full w-full object-contain"
+          className="absolute inset-0 h-full w-full object-cover"
           autoPlay
           muted
           loop
