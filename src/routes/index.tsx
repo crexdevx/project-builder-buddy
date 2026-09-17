@@ -231,7 +231,7 @@ export function Index() {
           </g>
         </svg>
 
-        <div className="relative z-10 mx-auto grid w-full max-w-6xl gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
+        <div className="relative z-10 mx-auto grid w-full max-w-6xl gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-center md:gap-12 lg:gap-16">
           <div>
             <span className="mb-4 block h-[3px] w-12 rounded-full bg-courses-accent" />
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-courses-accent">
