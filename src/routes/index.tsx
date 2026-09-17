@@ -185,7 +185,7 @@ export function Index() {
     <main className="bg-about-canvas">
       <section
         aria-label="North East Yoga and Meditation Centre"
-        className="relative aspect-[4/3] max-h-[100svh] w-full overflow-hidden bg-hero-sky"
+        className="relative aspect-[9/16] max-h-[100svh] w-full overflow-hidden bg-hero-sky sm:aspect-[16/9]"
       >
         <video
           className="absolute inset-0 h-full w-full object-contain"
@@ -200,57 +200,82 @@ export function Index() {
           <source src={heroMp4} type="video/mp4" />
         </video>
         <FloatingHeader />
+
+        <svg
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-[-1px] z-10 h-[9vw] min-h-14 w-full text-about-canvas sm:h-[7vw] sm:min-h-16"
+          viewBox="0 0 1440 140"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,140 L0,96 C240,24 560,0 840,34 C1080,63 1280,112 1440,80 L1440,140 Z"
+            fill="currentColor"
+          />
+        </svg>
       </section>
 
-      <section aria-labelledby="about-heading" className="px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <article className="about-feature mx-auto w-full max-w-6xl overflow-hidden rounded-t-[1.5rem] shadow-2xl sm:rounded-t-[2rem]">
-          <div className="aspect-[16/9] overflow-hidden sm:aspect-[2/1]">
+      <section
+        aria-labelledby="about-heading"
+        className="about-feature relative overflow-hidden bg-about-canvas px-5 pb-14 pt-6 sm:px-6 sm:pb-20 sm:pt-10 lg:px-8 lg:pb-24"
+      >
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 200 200"
+          className="pointer-events-none absolute -right-8 top-24 w-52 text-about-accent/25 sm:w-72 lg:right-4 lg:top-16 lg:w-80"
+        >
+          <g fill="currentColor">
+            <path d="M100 190c0-60 20-100 70-130-10 60-30 100-70 130z" />
+            <path d="M104 150c-6-44 6-74 46-96-2 46-16 76-46 96z" opacity="0.7" />
+            <path d="M96 150c-34-16-50-46-50-92 34 26 48 56 50 92z" opacity="0.55" />
+            <path d="M98 195c-2-52-10-86-30-118 26 26 38 62 34 118z" opacity="0.5" />
+          </g>
+        </svg>
+
+        <div className="relative z-10 mx-auto grid w-full max-w-6xl gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
+          <div>
+            <span className="mb-4 block h-[3px] w-12 rounded-full bg-courses-accent" />
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-courses-accent">
+              About Us
+            </p>
+            <h1
+              id="about-heading"
+              className="font-serif text-4xl leading-[1.1] text-courses-heading sm:text-5xl lg:text-[3.4rem]"
+            >
+              The Sanctuary For Your Well-Being
+            </h1>
+            <p className="mt-5 max-w-xl text-base leading-7 text-courses-body sm:text-lg sm:leading-8">
+              North East Yoga and Meditation Centre in Guwahati, Assam, is a premier sanctuary
+              for holistic well-being and professional growth. Whether you are seeking personal
+              healing or aspiring to become a certified instructor, our expert-led programs
+              empower you to transform your life.
+            </p>
+
+            <Button
+              asChild
+              size="lg"
+              className="group mt-7 h-auto gap-3 rounded-full bg-why-cta px-7 py-4 text-base font-semibold text-why-cta-text shadow-none transition-transform duration-300 hover:-translate-y-0.5 hover:bg-why-cta-hover sm:text-lg"
+            >
+              <Link to="/about">
+                Who We Are
+                <ArrowUpRight aria-hidden="true" className="size-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
+            </Button>
+          </div>
+
+          <div className="overflow-hidden rounded-[1.75rem] shadow-2xl sm:rounded-[2rem]">
             <img
               src={communityYogaImg}
               alt="A community yoga class practicing together outdoors in Guwahati"
-              className="h-full w-full object-cover"
+              className="aspect-[16/10] h-full w-full object-cover"
               width={1080}
-              height={604}
+              height={675}
               loading="lazy"
               decoding="async"
             />
           </div>
-
-          <div className="about-feature__body relative bg-about-navy px-6 pb-24 pt-8 text-about-on-navy sm:px-10 sm:pb-24 sm:pt-10 lg:min-h-64 lg:px-14 lg:pb-10 lg:pr-80 lg:pt-10">
-            <div className="relative z-10 max-w-3xl">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-about-accent">
-                About Us
-              </p>
-              <h1 id="about-heading" className="font-serif text-3xl leading-tight sm:text-4xl lg:text-5xl">
-                Welcome to our Holistic Sanctuary
-              </h1>
-              <p className="mt-4 text-sm leading-6 text-about-muted sm:text-base sm:leading-7">
-                North East Yoga and Meditation Centre in Guwahati, Assam, is a premier sanctuary
-                for holistic well-being and professional growth. Whether you are seeking personal
-                healing or aspiring to become a certified instructor, our expert-led programs
-                empower you to transform your life. Experience the authentic power of daily
-                practices, or build your career with our accredited yoga teacher training and
-                diploma certifications.
-              </p>
-            </div>
-
-            <div className="about-feature__action absolute bottom-0 right-0 z-20 flex h-20 items-center rounded-tl-[2.5rem] bg-about-button pl-8 pr-4 sm:h-20 sm:pl-10 sm:pr-6 lg:bottom-0 lg:right-0">
-              <Button
-                asChild
-                size="lg"
-                className="group h-auto gap-4 rounded-none bg-transparent p-0 text-base font-bold text-about-button-foreground shadow-none transition-transform duration-300 hover:-translate-y-0.5 hover:bg-transparent focus-visible:ring-about-button sm:text-lg"
-              >
-                <Link to="/enroll" search={{ course: undefined }}>
-                  Join the Community
-                  <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-about-arrow text-about-on-navy transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:size-12">
-                    <ArrowUpRight aria-hidden="true" className="size-6" />
-                  </span>
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </article>
+        </div>
       </section>
+
 
       <section aria-labelledby="why-yoga-heading" className="why-yoga-section px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
